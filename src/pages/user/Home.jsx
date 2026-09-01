@@ -1,9 +1,48 @@
 import { Link } from "react-router";
 import restaurantfood from "./../../assets/restauranfood.jpg";
+import bruchetta from "./../../assets/bruchetta.svg";
+import greeksalad from "./../../assets/greek salad.jpg";
+import lemondessert from "./../../assets/lemon dessert.jpg";
+import SpecialCard from "../../components/user/SpecialCard";
 
 const Home = () => {
+  const specials = [
+    {
+      name: "Greek salad",
+      price: "$ 12.99",
+      image: greeksalad,
+      description:
+        "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+    },
+    {
+      name: "Bruschetta",
+      price: "$ 5.99",
+      image: bruchetta,
+      description:
+        "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+    },
+    {
+      name: "Lemon Dessert",
+      price: "$ 5.00",
+      image: lemondessert,
+      description:
+        "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+    },
+  ];
+
   return (
     <>
+      <meta
+        name="description"
+        content="Little Lemon is a family-owned Mediterranean restaurant in Chicago specializing in traditional recipes with a modern twist."
+      />
+      <meta name="og:title" content="Little Lemon" />
+      <meta
+        name="og:description"
+        content="Craving authentic Mediterranean flavors? Check out our fresh seasonal menu and reserve your table today!"
+      />
+      <meta name="og:image" content="" />
+
       <div className="bg-primary-green">
         <div
           className="w-full p-4 md:p-6 lg:mx-auto lg:max-w-5xl flex flex-col gap-4
@@ -38,7 +77,25 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>hello</div>
+      <section id="menu" className="bg-[#f4f4f4] pb-5 pt-25">
+        <div className="mx-auto max-w-180">
+          <div className="mb-9 flex items-center justify-between">
+            <h2 className="font-serif text-[36px] font-bold tracking-wide text-[#202020]">
+              This weeks specials!
+            </h2>
+
+            <button className="rounded-xl bg-primary-yellow px-8 py-3 text-[13px] font-bold tracking-wide text-black">
+              Online Menu
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {specials.map((item) => (
+              <SpecialCard key={item.name} item={item} />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
