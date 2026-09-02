@@ -1,1 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-markazi: "Markazi Text", serif;
+  --font-karla: "Karla", sans-serif;
+
+  --color-primary-green: #495e57;
+  --color-primary-yellow: #f4ce14;
+  --color-secondary-one: #ee9972;
+  --color-secondary-two: #fbdabb;
+  --color-secondary-three: #edefee;
+  --color-secondary-four: #333333;
+}
