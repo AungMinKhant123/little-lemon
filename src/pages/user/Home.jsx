@@ -77,8 +77,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section id="menu" className="bg-[#f4f4f4] pb-5 pt-25">
-        <div className="mx-auto max-w-180">
+      <section
+        id="menu"
+        className="w-full p-4 md:p-6 lg:mx-auto lg:max-w-5xl flex flex-col gap-4
+       lg:flex-row lg:justify-between lg:pt-26"
+      >
+        <div className="mx-auto max-w-5xl">
           <div className="mb-9 flex items-center justify-between">
             <h2 className="font-serif text-[36px] font-bold tracking-wide text-[#202020]">
               This weeks specials!
