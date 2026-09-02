@@ -4,6 +4,7 @@ import Home from "./pages/user/Home";
 import NotFound from "./pages/user/NotFound";
 import About from "./pages/user/About";
 import Booking from "./pages/user/Booking";
+import BookingConfirmation from "./pages/user/BookingConfirmation";
 
 const App = () => {
   return (
@@ -13,6 +14,10 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="booking" element={<Booking />} />
+          <Route
+            path="booking-confirmation"
+            element={<BookingConfirmation />}
+          />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

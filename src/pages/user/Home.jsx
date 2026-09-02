@@ -60,7 +60,7 @@ const Home = () => {
               traditional recipes served with a modern twist.
             </p>
             <Link
-              to="/reservations"
+              to="/booking"
               className="px-8 py-2 text-lg bg-primary-yellow w-fit rounded-2xl"
             >
               Reserve a Table
