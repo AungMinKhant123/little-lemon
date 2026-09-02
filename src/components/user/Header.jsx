@@ -18,7 +18,7 @@ const Header = () => {
     },
     {
       name: "Reservations",
-      path: "/reservations",
+      path: "/booking",
     },
     {
       name: "Order Online",
